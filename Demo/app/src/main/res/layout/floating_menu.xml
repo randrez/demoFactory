@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto">
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/float_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        fab:menu_animationDelayPerItem="50"
+        fab:menu_showShadow="true"
+        fab:menu_colorNormal="@color/purple_500"
+        fab:menu_colorPressed="@color/purple_200"
+        tools:ignore="MissingConstraints">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/create_sale"
+            android:layout_width="25.dp"
+            android:layout_height="25.dp"
+            android:src="@drawable/ic_add_sale"
+            fab:fab_colorNormal="@color/purple_500"
+            fab:fab_colorPressed="@color/purple_200"
+            fab:fab_label="@string/create_sale"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/list_transmitter"
+            android:layout_width="25.dp"
+            android:layout_height="25.dp"
+            android:src="@drawable/ic_people"
+            fab:fab_colorNormal="@color/purple_500"
+            fab:fab_colorPressed="@color/purple_200"
+            fab:fab_label="@string/list_transmitter"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/list_clients"
+            android:layout_width="25.dp"
+            android:layout_height="25.dp"
+            android:src="@drawable/ic_clients"
+            fab:fab_colorNormal="@color/purple_500"
+            fab:fab_colorPressed="@color/purple_200"
+            fab:fab_label="@string/list_clients"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/list_sale"
+            android:layout_width="25.dp"
+            android:layout_height="25.dp"
+            android:src="@drawable/ic_list_sale"
+            fab:fab_colorNormal="@color/purple_500"
+            fab:fab_colorPressed="@color/purple_200"
+            fab:fab_label="@string/list_sale"
+            fab:fab_size="mini" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</FrameLayout>

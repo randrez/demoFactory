@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_home">
+
+    <fragment
+        android:id="@+id/fragment_home"
+        android:name="com.factory.demofactory.home.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/next_action_create_client"
+            app:destination="@id/client_fragment"/>
+
+        <action
+            android:id="@+id/next_action_transmitter_list"
+            app:destination="@+id/list_transmitter_fragment" />
+
+        <action
+            android:id="@+id/next_action_list_sales"
+            app:destination="@+id/list_sales_fragment" />
+
+        <action
+            android:id="@+id/next_action_list_clients"
+            app:destination="@id/list_client_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/transmitter_fragment"
+        android:name="com.factory.demofactory.transmitter.TransmitterFragment"
+        android:label="fragment_transmitter"
+        tools:layout="@layout/fragment_transmitter">
+
+        <action
+            android:id="@+id/next_action_create_sale"
+            app:destination="@+id/create_sale_fragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/list_transmitter_fragment"
+        android:name="com.factory.demofactory.transmitter.ListTransmitterFragment"
+        android:label="fragment_list_transmitter"
+        tools:layout="@layout/fragment_list_transmitter" />
+    <fragment
+        android:id="@+id/client_fragment"
+        android:name="com.factory.demofactory.client.ClientFragment"
+        android:label="fragment_client"
+        tools:layout="@layout/fragment_client">
+
+        <action
+            android:id="@+id/next_action_create_transmitter"
+            app:destination="@+id/transmitter_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/list_client_fragment"
+        android:name="com.factory.demofactory.client.ListClientFragment"
+        android:label="fragment_list_client_fragment"
+        tools:layout="@layout/fragment_list_client_fragment" />
+    <fragment
+        android:id="@+id/create_sale_fragment"
+        android:name="com.factory.demofactory.sale.CreateSaleFragment"
+        android:label="fragment_create_sale"
+        tools:layout="@layout/fragment_create_sale">
+
+        <action
+            android:id="@+id/next_action_print_sale"
+            app:destination="@id/print_sale_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/print_sale_fragment"
+        android:name="com.factory.demofactory.sale.PrintSaleFragment"
+        android:label="fragment_print_sale"
+        tools:layout="@layout/fragment_print_sale">
+
+        <action
+            android:id="@+id/back_to_home"
+            app:destination="@id/fragment_home"
+            app:popUpTo="@+id/fragment_home"
+            app:popUpToInclusive="true"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/list_sales_fragment"
+        android:name="com.factory.demofactory.sale.ListSalesFragment"
+        android:label="fragment_list_sales"
+        tools:layout="@layout/fragment_list_sales" >
+
+        <action
+            android:id="@+id/action_print_sale"
+            app:destination="@id/print_sale_fragment" />
+    </fragment>
+</navigation>
